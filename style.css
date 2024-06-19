@@ -22,7 +22,6 @@
 }
 
 .container {
-  /* background: var(--web-bg); */
   /* keep checking it */
   /* width: 98%;
     margin: 0 auto; */
@@ -223,9 +222,9 @@ li:hover > .under-line {
     transform: scale(1);
   }
 }
-/* --------------------------------------------------
---------------Project Section------------------------
------------------------------------------------------ */
+/*=================================================================*/
+/*-------------------------Project Section--------------------------*/
+/*=============================================================== */
 
 .projects {
   margin-top: 4rem;
@@ -233,7 +232,6 @@ li:hover > .under-line {
   display: flex;
   flex-direction: column;
   gap: 9em;
-  /* background: var(--web-bg); */
   padding: 50px;
 }
 
@@ -250,8 +248,6 @@ li:hover > .under-line {
   width: 70%;
   margin: 0 auto;
   border-radius: 2em;
-  /* box-shadow: 0px 0px 40px #1f1f1f; */
-  box-shadow: 0px 0px 40px #f1f1f1;
   box-shadow: 0px 0px 40px #8dcfac;
   background-repeat: no-repeat;
   background-size: cover;
@@ -393,4 +389,83 @@ li:hover > .under-line {
 #project-4 {
   background-image: url(/images/photography.jpg);
   margin-right: 120px;
+}
+
+/*=================================================================*/
+/*-------------------------Skill Section--------------------------*/
+/*=============================================================== */
+.skill-section{
+  /* height: 35em;
+  width: 90%; */
+
+  margin: 4em;
+  margin-top: 7em;
+}
+
+.skill-heading{
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--text-hover);
+  text-align: center;
+}
+
+.skill-heading span{
+  color: var(--text);
+}
+
+.skill-animation{
+  display: inline-flex;
+  margin-top: 7em;
+  padding: 1em;
+  /* border: 4px solid white; */
+}
+
+.skill-container{
+  /* height: 280px; */
+
+  padding: 1em;
+  display: flex;
+  gap: 2em;
+  animation: 15s skill infinite linear;
+}
+
+@keyframes skill {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.skill-div{
+  width: 260px;
+  height: 260px;
+  padding: 1em;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #00ff77;
+  overflow: hidden;
+}
+
+.skill-image{
+  background: #00ff77;
+  background: #141313;
+  width: 255px;
+}
+
+.skill-animation:hover .skill-container{
+  animation-play-state: paused;
+}
+
+.skill-image:hover{
+  scale: 1.2;
+  background: #141313;
+  background: #00ff77;
+}
+
+.skill-div:hover{
+  box-shadow: 0px 0px 15px white;
 }
