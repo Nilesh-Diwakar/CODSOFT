@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
@@ -15,22 +14,29 @@
   --dk-black: #000000;
   --link-border: #ffffff1a;
   --lt-white: #ffffffb3;
+  --fade-white: #aaaaaa;
   --dk-white: #ffffff;
   --dk-green: #18d26e;
   --project-shadow: #8dcfac;
   --skill-bg: #00ff77;
 }
 
-.wrapper {
+body {
   background: var(--lt-black);
-  height: 100vh;
-  /* width: 100vw; */
+}
+
+.wrapper {
+  /* background: var(--lt-black);
+  width: 100vw;
+  height: 100vh; */
 }
 
 .container {
   /* keep checking it */
   /* width: 98%;
-    margin: 0 auto; */
+  margin: 0 auto; */
+
+  overflow-x: hidden;
 }
 
 .nav-bar {
@@ -54,6 +60,8 @@
 }
 
 .name h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 3px;
   color: var(--dk-white);
   margin-left: -1.2rem;
   font-size: 3em;
@@ -212,8 +220,10 @@ li:hover > .under-line {
 
 .user-image img {
   /* 450px x 508px */
-  height: 550px;
-  width: 500px;
+  /* height: 550px;
+  height: 450px; */
+  height: 508px;
+  width: 400px;
   z-index: -9;
 }
 
@@ -237,7 +247,9 @@ li:hover > .under-line {
 /*=============================================================== */
 
 .projects {
-  margin-top: 4rem;
+  overflow-x: hidden;
+
+  margin-top: 7rem;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -387,21 +399,21 @@ li:hover > .under-line {
 }
 
 #project-1 {
-  background-image: url(/images/food.png);
+  background-image: url(images/food.png);
   margin-left: 120px;
 }
 
 #project-2 {
-  background-image: url(/images/home_interior.jpg);
+  background-image: url(images/home_interior.jpg);
   margin-right: 120px;
 }
 #project-3 {
-  background-image: url(/images/travel.jpg);
+  background-image: url(images/travel.jpg);
   margin-left: 120px;
 }
 
 #project-4 {
-  background-image: url(/images/photography.jpg);
+  background-image: url(images/photography.jpg);
   margin-right: 120px;
 }
 
@@ -409,6 +421,8 @@ li:hover > .under-line {
 /* -------------------------Skill Section-------------------------- */
 /* =============================================================== */
 .skill-section {
+  overflow-x: hidden;
+
   /* height: 35em;
   width: 90%; */
   margin: 4em;
@@ -422,7 +436,8 @@ li:hover > .under-line {
   text-align: center;
 }
 
-.skill-heading span {
+.skill-heading span,
+.resume-top-heading span {
   color: var(--lt-white);
 }
 
@@ -481,10 +496,123 @@ li:hover > .under-line {
   box-shadow: 0px 0px 15px var(--dk-white);
 }
 
+/*=================================================================*/
+/*-------------------------Resume Section--------------------------*/
+/*=============================================================== */
+.resume-section {
+  overflow-x: hidden;
+
+  margin: 2em;
+  margin-top: 7em;
+}
+
+.resume-top-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-top-heading h2 {
+  font-size: 5em;
+  font-weight: 700;
+  color: var(--dk-green);
+}
+
+.resume-grid {
+  margin: 2em 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "personal professional";
+}
+
+.personal-info {
+  grid-area: personal;
+  padding: 2em;
+
+  /* display: flex;
+  flex-direction: column;
+  gap: 2em; */
+}
+
+.Professional-info {
+  grid-area: professional;
+  padding: 2em;
+}
+
+.resume-subheading {
+  font-size: 3em;
+  font-weight: 500;
+  color: var(--dk-white);
+  margin-bottom: 1em;
+}
+
+.resume-content {
+  border-left: 4px solid var(--link-border);
+  padding: 0em 1em;
+  position: relative;
+}
+
+.personal-info-content,
+.Professional-info-content {
+  position: relative;
+  padding: 0 1em;
+  margin-bottom: 2em;
+}
+
+.personal-info-content::before,
+.Professional-info-content::before {
+  content: "";
+  background: var(--dk-green);
+  border: 2px solid var(--dk-green);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2%;
+  right: calc(100% + 0.4em);
+}
+
+.designation {
+  color: var(--dk-green);
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.date {
+  background: var(--link-border);
+  width: fit-content;
+  color: var(--lt-white);
+  padding: 4px 20px;
+  font-weight: bold;
+  margin: 0.5em 0;
+  border-radius: 3em;
+  /* border: 1px solid var(--dk-green); */
+}
+
+.firm-name {
+  padding: 0.1em;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--dk-white);
+}
+
+.resume-about {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  padding: 0.1em;
+  font-size: 1.15em;
+  font-weight: 500;
+  color: var(--lt-white);
+  line-height: 28px;
+}
+
 /* ================================================================= */
 /* -------------------------Contact Me Section-------------------------- */
 /* =============================================================== */
 .contact-me-section {
+  overflow-x: hidden;
+
   position: relative;
   margin: 1em;
   margin-top: 7em;
@@ -512,15 +640,18 @@ li:hover > .under-line {
 .contactme-content {
   width: 100%;
   margin-top: 2em;
-  display: flex;
-  /* align-items: center; */
-  justify-content: space-between;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 8fr 12fr;
+  grid-template-areas: "left right";
   padding: 2em;
   z-index: 1;
 }
 
 .my-info {
-  width: 100%;
+  grid-area: right;
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -564,7 +695,7 @@ li:hover > .under-line {
 
 .contact-links {
   margin-top: 3em;
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: center;
   gap: 0.9em;
@@ -600,7 +731,8 @@ li:hover > .under-line {
 }
 
 .form {
-  width: 90%;
+  /* width: 90%; */
+  grid-area: left;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -646,6 +778,8 @@ li:hover > .under-line {
 /* -------------------------Footer Section-------------------------- */
 /* =============================================================== */
 .footer-section {
+  overflow-x: hidden;
+
   margin: 1em;
   margin-top: 3em;
   display: flex;
